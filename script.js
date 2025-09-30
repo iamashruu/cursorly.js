@@ -1,5 +1,5 @@
 (function () {
-    class CursorFX {
+    class Cursorly {
         constructor(options = {}) {
             // Predefined cursor icons
             this.cursorIcons = [
@@ -156,15 +156,15 @@
             document.documentElement.style.cursor = "default";
         }
 
-        enableParticles() {
+        enableEffect() {
             this.particlesEnabled = true;
         }
 
-        disableParticles() {
+        disableEffect() {
             this.particlesEnabled = false;
         }
 
-        setCursorIcon(index) {
+        setIcon(index) {
             if (index >= 0 && index < this.cursorIcons.length) {
                 this.options.cursor = index;
                 this.cursorLoaded = false;
@@ -228,7 +228,7 @@
     }
 
     // Global init
-    window.CursorFX = {
-        init: (options) => new CursorFX(options)
+    window.Cursorly = {
+        init: (options) => new Cursorly(options)
     };
 })();
