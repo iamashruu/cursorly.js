@@ -53,6 +53,10 @@
             // Hide default cursor
             document.body.style.cursor = "none";
             document.documentElement.style.cursor = "none";
+            document.querySelectorAll("a, button").forEach(el => {
+            el.style.cursor = "none";
+            });
+
 
             // Canvas setup
             this.canvas = document.createElement("canvas");
