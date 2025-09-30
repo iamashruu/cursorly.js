@@ -9,26 +9,20 @@
 </body>
   <script src="script.js"></script>
   <script>
-    const cursor = CursorFX.init({
-        color: "rainbow",
-        density: 6,
-        size: [2, 8],
-        decay: 0.95,
-        cursorIcon: "https://img.icons8.com/softteal-color/24/blue-pointer.png",
-        cursorSize: 24
-    });
     
-    // Disable particles only (cursor remains visible)
-    // cursor.disableParticles();
-    
-    // Re-enable particles later
-    // cursor.enableParticles();
-    
-    // Disable both cursor + particles
-    // cursor.disable();
-    
-    // Enable both cursor + particles
-    // cursor.enable();
+
+        const cursor = CursorFX.init({
+            cursor: 0, // icon index
+            effect: { name: "trail", color: "rainbow" } // only name & color required, others optional
+        });
+
+        // Switch dynamically
+        // cursor.setCursorIcon(1);
+        // cursor.setEffect({ name: "sparkle", color: "#ff4081" });
+        // cursor.disableParticles();
+        // cursor.disable();
+
+
     </script>
 
 </html>
