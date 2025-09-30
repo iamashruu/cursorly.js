@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CursorFX Test</title>
+</head>
+<body>
+  <h1>CursorFX Test</h1>
+</body>
+  <script src="script.js"></script>
+  <script>
+    const cursor = CursorFX.init({
+        color: "rainbow",
+        density: 6,
+        size: [2, 8],
+        decay: 0.95,
+        cursorIcon: "https://img.icons8.com/softteal-color/24/blue-pointer.png",
+        cursorSize: 24
+    });
+    
+    // Disable particles only (cursor remains visible)
+    // cursor.disableParticles();
+    
+    // Re-enable particles later
+    // cursor.enableParticles();
+    
+    // Disable both cursor + particles
+    // cursor.disable();
+    
+    // Enable both cursor + particles
+    // cursor.enable();
+    </script>
+
+</html>
