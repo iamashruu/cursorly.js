@@ -1,31 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cursorly.js Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursorly.js Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #0f121b; color: #e0e0e0; line-height: 1.6; }
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0da8a1, #1fc8db);
+    color: white;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; font-weight: 600; }
+header p { font-size: 1.2rem; color: #d0f0f5; }
+
+/* Container */
+.container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+
+/* Headings */
+h2 { margin: 2rem 0 1rem 0; color: #1fc8db; font-weight: 600; }
+
+/* Features */
+ul.features { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+ul.features li {
+    background: #1b1f2e; padding: 1rem; border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s, background 0.2s;
+}
+ul.features li:hover { transform: translateY(-3px); background: #1fc8db20; }
+
+/* Code */
+pre { background: #1b1f2e; color: #f8f8f2; padding: 1rem; border-radius: 10px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+/* Example Cards */
+.example { background: #1b1f2e; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); margin-bottom: 2rem; }
+.example h3 { color: #ffffff; margin-bottom: 1rem; }
+
+/* Buttons */
+button {
+    margin: 0.4rem 0.4rem 0.4rem 0; padding: 0.5rem 1rem; border: none;
+    background: #0da8a1; color: white; border-radius: 6px; cursor: pointer; font-weight: 600;
+    transition: all 0.2s ease;
+}
+button:hover { background: #1fc8db; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+
+/* Button grids */
+.button-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+
+/* Cursor Icon Gallery */
+.icon-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.icon-gallery div {
+    background: #0f121b; border: 2px solid #1fc8db50; padding: 1rem; border-radius: 8px;
+    text-align: center; cursor: pointer; transition: all 0.2s;
+}
+.icon-gallery div:hover { border-color: #1fc8db; transform: scale(1.05); }
+.icon-gallery img { width: 40px; height: 40px; margin-bottom: 0.5rem; }
+
+/* Interactive Editor */
+.editor textarea { width: 100%; min-height: 120px; background: #1b1f2e; border: 1px solid #1fc8db50; color: #e0e0e0; padding: 1rem; border-radius: 8px; font-family: 'JetBrains Mono', monospace; margin-bottom: 1rem; resize: vertical; }
+.editor button { width: 100%; }
+
+/* Footer */
+footer { text-align: center; margin: 4rem 0 2rem; color: #777; font-size: 0.9rem; }
+</style>
 </head>
 <body>
-  <h1>Cursorly.js Test</h1>
+
+<header>
+    <h1>Cursorly.js</h1>
+    <p>Custom cursor library with optional particle effects</p>
+</header>
+
+<div class="container">
+
+<h2>Features</h2>
+<ul class="features">
+    <li>Custom cursor icons</li>
+    <li>Optional particle effects: <code>trail</code>, <code>sparkle</code>, <code>none</code></li>
+    <li>Enable/disable cursor and particles dynamically</li>
+    <li>Lightweight, high-performance, full-screen canvas</li>
+    <li>Developer-friendly API</li>
+</ul>
+
+<h2>Cursor Icon Gallery</h2>
+<div class="icon-gallery">
+    <div onclick="cursor.setIcon(0)"><img src="https://img.icons8.com/ios-filled/50/ffffff/mouse-pointer.png"><div>Icon 0</div></div>
+    <div onclick="cursor.setIcon(1)"><img src="https://img.icons8.com/ios-filled/50/ffffff/cursor.png"><div>Icon 1</div></div>
+    <div onclick="cursor.setIcon(2)"><img src="https://img.icons8.com/ios-filled/50/ffffff/cursor-select.png"><div>Icon 2</div></div>
+</div>
+
+<h2>Live Example & Effects</h2>
+<div class="example">
+    <h3>Cursor Controls</h3>
+    <div class="button-grid">
+        <button onclick="cursor.setEffect({name:'trail', color:'rainbow'})">Trail Rainbow</button>
+        <button onclick="cursor.setEffect({name:'sparkle', color:'#ff4081'})">Sparkle Pink</button>
+        <button onclick="cursor.disableEffect()">Disable Effect</button>
+        <button onclick="cursor.enableEffect()">Enable Effect</button>
+        <button onclick="cursor.disable()">Disable Cursor</button>
+        <button onclick="cursor.enable()">Enable Cursor</button>
+    </div>
+</div>
+
+<h2>Interactive Editor</h2>
+<div class="example editor">
+    <textarea id="cursorConfig">
+// Example: change icon or effect dynamically
+cursor.setIcon(1);
+cursor.setEffect({name:"trail", color:"rainbow", density:8, size:[2,8]});
+    </textarea>
+    <button onclick="runEditor()">Run Code</button>
+</div>
+
+<h2>Code Snippets</h2>
+<pre><code>// Switch cursor icon dynamically
+cursor.setIcon(1);
+
+// Change particle effect dynamically
+cursor.setEffect({
+    name: "sparkle",
+    color: "#ff4081",
+    density: 10,
+    size: [3, 12]
+});
+
+// Disable or enable cursor
+cursor.disable();
+cursor.enable();</code></pre>
+
+</div>
+
+<footer>
+    &copy; 2025 Cursorly.js • MIT License
+</footer>
+
+<script src="script.js"></script>
+<script>
+    const cursor = Cursorly.init({
+        cursor: 0,
+        effect: { name: "trail", color: "rainbow" }
+    });
+
+    function runEditor() {
+        try {
+            eval(document.getElementById("cursorConfig").value);
+        } catch (e) {
+            alert("Error in code: " + e.message);
+        }
+    }
+</script>
+
 </body>
-  <!-- <script src="https://iamashruu.github.io/cursorly.js/script.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js/script.js"></script> -->
-
-  <script src="script.js"></script>
-  <script>
-    
-
-        const cursor = Cursorly.init({
-            cursor: 3, // icon index
-            effect: { name: "trail", color: "rainbow" } // only name & color required, others optional
-        });
-
-        // Switch dynamically
-        // cursor.setIcon(5);
-        // cursor.setEffect({ name: "sparkle", color: "#ff4081" });
-        // cursor.disableEffect();
-        // cursor.disable();
-
-
-    </script>
-
 </html>
