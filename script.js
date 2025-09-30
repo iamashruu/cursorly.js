@@ -158,6 +158,10 @@
             this.particlesEnabled = false;
             document.body.style.cursor = "default";
             document.documentElement.style.cursor = "default";
+            document.querySelectorAll("a, button").forEach(el => {
+                el.style.cursor = "pointer";
+                });
+    
         }
 
         enableEffect() {
