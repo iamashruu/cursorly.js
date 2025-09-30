@@ -4,8 +4,12 @@
             // Predefined cursor icons
             this.cursorIcons = [
                 "https://img.icons8.com/softteal-color/24/blue-pointer.png",
-                "https://img.icons8.com/color/48/000000/mouse-pointer.png",
-                "https://img.icons8.com/emoji/48/hand-pointer.png"
+                "https://img.icons8.com/keek/100/cursor.png",
+                "https://img.icons8.com/quill/100/cursor.png",
+                "https://img.icons8.com/quill/100/cursor.png",
+                "https://img.icons8.com/neon/96/cursor.png",
+                "https://img.icons8.com/liquid-glass/48/cursor.png",
+                "https://img.icons8.com/plasticine/100/cursor.png"
             ];
 
             // Preload all icons
