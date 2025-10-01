@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursorly.js Demo</title>
+<title>Cursorly.js - Creating Customizable Cursor Effects</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <style>
@@ -65,9 +65,9 @@ button:hover { background: #1fc8db; transform: translateY(-2px); box-shadow: 0 4
 .button-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
 
 /* Cursor Icon Gallery */
-.icon-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.icon-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .icon-gallery div {
-    background: #0f121b; border: 2px solid #1fc8db50; padding: 1rem; border-radius: 8px;
+    background: #2c3552; border: 2px solid #1fc8db50; padding: 1rem; border-radius: 8px;
     text-align: center; cursor: pointer; transition: all 0.2s;
 }
 .icon-gallery div:hover { border-color: #1fc8db; transform: scale(1.05); }
@@ -122,7 +122,46 @@ footer a:hover { color: #0da8a1; }
 <div class="icon-gallery">
     <div onclick="cursor.setIcon(0)"><img src="https://img.icons8.com/softteal-color/24/blue-pointer.png"><div>Icon 0</div></div>
     <div onclick="cursor.setIcon(1)"><img src="https://img.icons8.com/keek/100/cursor.png"><div>Icon 1</div></div>
-    <div onclick="cursor.setIcon(2)"><img src="https://img.icons8.com/plasticine/100/cursor.png"><div>Icon 6</div></div>
+    <div onclick="cursor.setIcon(2)"><img src="https://img.icons8.com/quill/100/cursor.png"><div>Icon 2</div></div>
+    <div onclick="cursor.setIcon(3)"><img src="https://img.icons8.com/quill/100/cursor.png"><div>Icon 3</div></div>
+    <div onclick="cursor.setIcon(4)"><img src="https://img.icons8.com/neon/96/cursor.png"><div>Icon 4</div></div>
+    <div onclick="cursor.setIcon(5)"><img src="https://img.icons8.com/liquid-glass/48/cursor.png"><div>Icon 5</div></div>
+    <div onclick="cursor.setIcon(6)"><img src="https://img.icons8.com/plasticine/100/cursor.png"><div>Icon 6</div></div>
+    <div onclick="cursor.setIcon(7)"><img src="https://img.icons8.com/dotty/80/move.png"><div>Icon 7</div></div>
+    <div onclick="cursor.setIcon(8)"><img src="https://img.icons8.com/nolan/64/move.png"><div>Icon 8</div></div>
+    <div onclick="cursor.setIcon(9)"><img src="https://img.icons8.com/color/48/move.png"><div>Icon 9</div></div>
+    <div onclick="cursor.setIcon(10)"><img src="https://img.icons8.com/nolan/64/scene-builder.png"><div>Icon 10</div></div>
+    <div onclick="cursor.setIcon(11)"><img src="https://img.icons8.com/skeuomorphism/32/color-wheel-pointer.png"><div>Icon 11</div></div>
+    <div onclick="cursor.setIcon(12)"><img src="https://img.icons8.com/skeuomorphism/32/duotone-pointer.png"><div>Icon 12</div></div>
+    <div onclick="cursor.setIcon(13)"><img src="https://img.icons8.com/windows/32/crosshair.png"><div>Icon 13</div></div>
+    <div onclick="cursor.setIcon(14)"><img src="https://img.icons8.com/dotty/80/crosshair.png"><div>Icon 14</div></div>
+    <div onclick="cursor.setIcon(15)"><img src="https://img.icons8.com/ios/50/circled-dot.png"><div>Icon 15</div></div>
+    <div onclick="cursor.setIcon(16)"><img src="https://img.icons8.com/color/48/circled-dot.png"><div>Icon 16</div></div>
+    <div onclick="cursor.setIcon(17)"><img src="https://img.icons8.com/office/40/circled-dot.png"><div>Icon 17</div></div>
+    <div onclick="cursor.setIcon(18)"><img src="https://img.icons8.com/ios/50/define-location--v1.png"><div>Icon 18</div></div>
+    <div onclick="cursor.setIcon(19)"><img src="https://img.icons8.com/ios-filled/50/define-location--v1.png"><div>Icon 19</div></div>
+    <div onclick="cursor.setIcon(20)"><img src="https://img.icons8.com/color/48/define-location--v1.png"><div>Icon 20</div></div>
+    <div onclick="cursor.setIcon(21)"><img src="https://img.icons8.com/sf-regular-filled/48/one-finger.png"><div>Icon 21</div></div>
+    <div onclick="cursor.setIcon(22)"><img src="https://img.icons8.com/stamp/32/one-finger.png"><div>Icon 22</div></div>
+    <div onclick="cursor.setIcon(23)"><img src="https://img.icons8.com/ultraviolet/40/one-finger--v1.png"><div>Icon 23</div></div>
+    <div onclick="cursor.setIcon(24)"><img src="https://img.icons8.com/keek/100/one-finger.png"><div>Icon 24</div></div>
+    <div onclick="cursor.setIcon(25)"><img src="https://img.icons8.com/external-bluetone-bomsymbols-/91/external-arrow-cursor-digital-design-bluetone-set-1-bluetone-bomsymbols--2.png"><div>Icon 25</div></div>
+    <div onclick="cursor.setIcon(26)"><img src="https://img.icons8.com/external-tal-revivo-green-tal-revivo/36/external-mouse-cursor-input-movable-device-directional-navigation-selection-green-tal-revivo.png"><div>Icon 26</div></div>
+    <div onclick="cursor.setIcon(27)"><img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/external-top-page-movement-of-mouse-cursor-arrow-selection-tritone-tal-revivo.png"><div>Icon 27</div></div>
+    <div onclick="cursor.setIcon(28)"><img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/external-top-page-movement-of-mouse-cursor-arrow-selection-regular-tal-revivo.png"><div>Icon 28</div></div>
+    <div onclick="cursor.setIcon(29)"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-top-page-movement-of-mouse-cursor-arrow-selection-shadow-tal-revivo.png"><div>Icon 29</div></div>
+    <div onclick="cursor.setIcon(30)"><img src="https://img.icons8.com/external-vectorslab-glyph-vectorslab/53/external-Mouse-gaming-vectorslab-glyph-vectorslab.png"><div>Icon 30</div></div>
+    <div onclick="cursor.setIcon(31)"><img src="https://img.icons8.com/emoji/48/mouse-body-emoji.png"><div>Icon 31</div></div>
+    <div onclick="cursor.setIcon(32)"><img src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/56/external-mouse-double-click-for-access-an-application-selection-fresh-tal-revivo.png"><div>Icon 32</div></div>
+    <div onclick="cursor.setIcon(33)"><img src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/external-click-touch-gestures-those-icons-lineal-those-icons.png"><div>Icon 33</div></div>
+    <div onclick="cursor.setIcon(34)"><img src="https://img.icons8.com/bubbles/50/electrified-cursor.png"><div>Icon 34</div></div>
+    <div onclick="cursor.setIcon(35)"><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-mouse-double-click-for-access-an-application-selection-shadow-tal-revivo.png"><div>Icon 35</div></div>
+    <div onclick="cursor.setIcon(36)"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-sand-cursors-soft-fill-soft-fill-juicy-fish.png"><div>Icon 36</div></div>
+    <div onclick="cursor.setIcon(37)"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-vector-cursors-soft-fill-soft-fill-juicy-fish.png"><div>Icon 37</div></div>
+    <div onclick="cursor.setIcon(38)"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-move-cursors-soft-fill-soft-fill-juicy-fish-2.png"><div>Icon 38</div></div>
+    <div onclick="cursor.setIcon(39)"><img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/64/external-click-on-touchscreen-isolate-on-a-white-background-touch-tritone-tal-revivo.png"><div>Icon 39</div></div>
+    <div onclick="cursor.setIcon(40)"><img src="https://img.icons8.com/external-tal-revivo-green-tal-revivo/36/external-click-on-touchscreen-isolate-on-a-white-background-touch-green-tal-revivo.png"><div>Icon 40</div></div>
+    <div onclick="cursor.setIcon(41)"><img src="https://img.icons8.com/external-avoca-kerismaker/64/external-Direct-cursor-creativity-avoca-kerismaker.png"><div>Icon 41</div></div>
 </div>
 
 <!-- Examples -->
@@ -138,7 +177,41 @@ footer a:hover { color: #0da8a1; }
         <button onclick="cursor.enable()">Enable Cursor</button>
     </div>
 </div>
+<h2>Installation</h2>
+        <p>Include the library via CDN:</p>
+        <pre><code>&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js/script.js"&gt;&lt;/script&gt;</code></pre>
 
+        <h2>Initialization</h2>
+        <p>Initialize the cursor with default options:</p>
+        <pre><code>const cursor = Cursorly.init({
+    cursor: 0, // Index of the cursor icon (default: 0)
+    effect: { name: "trail", color: "rainbow" } // Effect name and color are required
+});</code></pre>
+
+        <div class="note">
+            <strong>Note:</strong> Make sure to include the script tag before using the library in your JavaScript code.
+        </div>
+
+        <h2>Example</h2>
+        <p>Here’s a complete example:</p>
+        <pre><code>
+        &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title>Cursorly.js Example&lt;/title&gt;
+                &lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js/script.js"&gt;&lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;script&gt;
+                    const cursor = Cursorly.init({
+                        cursor: 0,
+                        effect: { name: "trail", color: "rainbow" }
+                    });
+                &lt;/script&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
 <!-- Interactive Editor -->
 <h2>Interactive Editor</h2>
 <div class="example editor">
@@ -152,7 +225,17 @@ cursor.setEffect({name:"trail", color:"rainbow", density:8, size:[2,8]});
 
 <!-- Code Snippets -->
 <h2>Code Snippets</h2>
-<pre><code>// Switch cursor icon dynamically
+<pre><code>
+//Initialize
+const cursor = Cursorly.init({
+    cursor: 0,
+    effect: { name: "trail", color: "rainbow" }
+});
+
+// alternate with default values
+const cursor = Cursorly.init();
+
+// Switch cursor icon dynamically
 cursor.setIcon(1);
 
 // Change particle effect dynamically
@@ -162,6 +245,10 @@ cursor.setEffect({
     density: 10,
     size: [3, 12]
 });
+
+//Disable or enable effects dynamically::
+cursor.disableEffect(); // Turn off particle effects
+cursor.enableEffect();  // Turn on particle effects
 
 // Disable or enable cursor
 cursor.disable();
@@ -194,4 +281,3 @@ cursor.enable();</code></pre>
 
 </body>
 </html>
-```
