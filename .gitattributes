@@ -1,7 +1,16 @@
-# Ignore everything by default
-* export-ignore
+# Set default line endings for cross-platform compatibility
+* text=auto
 
-# Keep only dist folder in release archives
-/README.md -export-ignore
-/dist/cursorly.min.js -export-ignore
-/LICENSE -export-ignore
+# Explicitly ensure your minified files are treated as binary (recommended)
+# This prevents Git from trying to convert line endings on the files in dist/.
+# Note: This is NOT what excludes the files, this just manages line endings.
+/dist/cursorly.min.js binary
+
+# All other commonly ignored files that are NOT needed in a release ZIP
+.gitignore export-ignore
+.gitattributes export-ignore
+.editorconfig export-ignore
+.travis.yml export-ignore
+# etc.
+
+# IMPORTANT: Ensure there is NO LINE that says 'dist/ export-ignore'
