@@ -1,0 +1,7 @@
+# Ignore everything by default
+* export-ignore
+
+# Keep only dist folder in release archives
+/dist/* -export-ignore
+/README.md -export-ignore
+/LICENSE -export-ignore
