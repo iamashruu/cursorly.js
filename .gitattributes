@@ -2,6 +2,6 @@
 * export-ignore
 
 # Keep only dist folder in release archives
-/dist/* -export-ignore
 /README.md -export-ignore
+/dist/cursorly.min.js -export-ignore
 /LICENSE -export-ignore
