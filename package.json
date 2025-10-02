@@ -1,0 +1,30 @@
+{
+    "name": "cursorly.js",
+    "version": "1.0.0",
+    "description": "Custom cursor library with effects and icons using javascript",
+    "main": "dist/cursorly.min.js",
+    "type": "module",
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c -w",
+        "clean": "rimraf dist",
+        "dev": "npm run watch",
+        "prod": "npm run clean && npm run build && echo Build complete!"
+    },
+    "keywords": [
+        "cursor",
+        "custom-cursor",
+        "cursor-effects",
+        "javascript",
+        "custom-cursor-library"
+    ],
+    "author": "iamashruu",
+    "license": "MIT",
+    "devDependencies": {
+        "@rollup/plugin-json": "^6.0.0",
+        "@rollup/plugin-node-resolve": "^15.0.0",
+        "@rollup/plugin-terser": "^0.3.0",
+        "rimraf": "^6.0.1",
+        "rollup": "^3.29.5"
+    }
+}

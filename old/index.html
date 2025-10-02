@@ -263,10 +263,13 @@ cursor.enable();</code></pre>
     <a href="https://linkedin.com/in/iamashruu" target="_blank"><i class="fab fa-linkedin"></i></a>
 </footer>
 
-<!-- Load module -->
-<script src="dist/cursorly.min.js"></script>
+<script src="script.js"></script>
 <script>
-    const cursor = Cursorly.init({ cursor: 0, effect: { name: 'trail' } });
+    const cursor = Cursorly.init({
+        cursor: 0,
+        effect: { name: "trail", color: "rainbow" }
+    });
+
     function runEditor() {
         try {
             eval(document.getElementById("cursorConfig").value);
