@@ -23,7 +23,7 @@ Cursorly.js works in all modern browsers (Chrome, Firefox, Safari, Edge).
 Include via **CDN**:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js/script.js"><script>
+<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.0/dist/cursorly.min.js"></script>
 ```
 
 
