@@ -114,15 +114,21 @@
     <button onclick="cursor.setEffect({name:'comet'})">Comet</button>
   </div>
 
-  <h3>Emoji Effects</h3>
+  <h3>Default Emoji Effects</h3>
   <div class="button-grid">
-    <button onclick="cursor.setEffect({name:'emoji', shape:'✨'})">Emoji Sparkle ✨</button>
-    <button onclick="cursor.setEffect({name:'emojiHearts', shape:'💖'})">Hearts 💖</button>
-    <button onclick="cursor.setEffect({name:'emojiStars', shape:'⭐'})">Stars ⭐</button>
-    <button onclick="cursor.setEffect({name:'emojiFire', shape:'🔥'})">Fire 🔥</button>
-    <button onclick="cursor.setEffect({name:'emojiSnow', shape:'❄️'})">Snow ❄️</button>
-    <button onclick="cursor.setEffect({name:'emojiMagic', shape:'🪄'})">Magic Wand 🪄</button>
+    <button onclick="cursor.setEffect({name:'emoji', shape:'✨'})">emoji ✨</button>
+    <button onclick="cursor.setEffect({name:'emojiHearts', shape:'💖'})">emojiHearts 💖</button>
+    <button onclick="cursor.setEffect({name:'emojiStars', shape:'⭐'})">emojiStars ⭐</button>
+    <button onclick="cursor.setEffect({name:'emojiFire', shape:'🔥'})">emojiFire 🔥</button>
+    <button onclick="cursor.setEffect({name:'emojiSnow', shape:'❄️'})">emojiSnow ❄️</button>
+    <button onclick="cursor.setEffect({name:'emojiMagic', shape:'🪄'})">emojiMagic 🪄</button>
   </div>
+
+  <h3>Custom Emoji Effects</h3>
+  
+  <p>Click on an emoji to set it as the cursor effect:</p>
+  <div class="emoji-grid"></div>
+
 </div>
 
 <h2>Installation</h2>
@@ -210,7 +216,7 @@ cursor.enable();</code></pre>
     <a href="https://github.com/iamashruu" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com/in/iamashruu" target="_blank"><i class="fab fa-linkedin"></i></a>
 </footer>
-
+<script src="assets/js/script.js"></script>
 <!-- Load module -->
 <script src="dist/cursorly.min.js"></script>
  <!-- load via cdn -->

@@ -75,3 +75,29 @@ footer { text-align: center; margin: 4rem 0 2rem; color: #777; font-size: 0.9rem
 footer a { color: #1fc8db; margin: 0 0.5rem; font-size: 1.2rem; }
 footer a:hover { color: #0da8a1; }
 
+
+/* emoji */
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 8px;
+    /* max-width: 320px; */
+    margin: 10px auto;
+    padding: 6px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.emoji-grid span {
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    user-select: none;
+}
+
+.emoji-grid span:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.2);
+}
