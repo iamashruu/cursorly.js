@@ -81,6 +81,7 @@ button:hover { background: #1fc8db; transform: translateY(-2px); box-shadow: 0 4
 footer { text-align: center; margin: 4rem 0 2rem; color: #777; font-size: 0.9rem; }
 footer a { color: #1fc8db; margin: 0 0.5rem; font-size: 1.2rem; }
 footer a:hover { color: #0da8a1; }
+
 </style>
 </head>
 <body>
@@ -164,19 +165,42 @@ footer a:hover { color: #0da8a1; }
     <div onclick="cursor.setIcon(41)"><img src="https://img.icons8.com/external-avoca-kerismaker/64/external-Direct-cursor-creativity-avoca-kerismaker.png"><div>Icon 41</div></div>
 </div>
 
-<!-- Examples -->
 <h2 id="examples">Live Example & Effects</h2>
 <div class="example">
-    <h3>Cursor Controls</h3>
-    <div class="button-grid">
-        <button onclick="cursor.setEffect({name:'trail', color:'rainbow'})">Trail Rainbow</button>
-        <button onclick="cursor.setEffect({name:'sparkle', color:'#ff4081'})">Sparkle Pink</button>
-        <button onclick="cursor.disableEffect()">Disable Effect</button>
-        <button onclick="cursor.enableEffect()">Enable Effect</button>
-        <button onclick="cursor.disable()">Disable Cursor</button>
-        <button onclick="cursor.enable()">Enable Cursor</button>
-    </div>
+  <h3>Cursor Controls</h3>
+
+  <div class="button-grid">
+    <!-- General Cursor Controls -->
+    <button onclick="cursor.disable()">Disable Cursor</button>
+    <button onclick="cursor.enable()">Enable Cursor</button>
+    <button onclick="cursor.disableEffect()">Disable Effect</button>
+    <button onclick="cursor.enableEffect()">Enable Effect</button>
+  </div>
+
+  <h3>Normal Effects</h3>
+  <div class="button-grid">
+    <button onclick="cursor.setEffect({name:'trail', color:'rainbow'})">Trail Rainbow</button>
+    <button onclick="cursor.setEffect({name:'sparkle', color:'#ff4081'})">Sparkle Pink</button>
+    <button onclick="cursor.setEffect({name:'firing'})">Firing</button>
+    <button onclick="cursor.setEffect({name:'circle', color:'#00ffcc'})">Circle</button>
+    <button onclick="cursor.setEffect({name:'neonGlow'})">Neon Glow</button>
+    <button onclick="cursor.setEffect({name:'fireworks'})">Fireworks</button>
+    <button onclick="cursor.setEffect({name:'snowfall'})">Snowfall</button>
+    <button onclick="cursor.setEffect({name:'aura'})">Aura</button>
+    <button onclick="cursor.setEffect({name:'comet'})">Comet</button>
+  </div>
+
+  <h3>Emoji Effects</h3>
+  <div class="button-grid">
+    <button onclick="cursor.setEffect({name:'emoji', shape:'✨'})">Emoji Sparkle ✨</button>
+    <button onclick="cursor.setEffect({name:'emojiHearts', shape:'💖'})">Hearts 💖</button>
+    <button onclick="cursor.setEffect({name:'emojiStars', shape:'⭐'})">Stars ⭐</button>
+    <button onclick="cursor.setEffect({name:'emojiFire', shape:'🔥'})">Fire 🔥</button>
+    <button onclick="cursor.setEffect({name:'emojiSnow', shape:'❄️'})">Snow ❄️</button>
+    <button onclick="cursor.setEffect({name:'emojiMagic', shape:'🪄'})">Magic Wand 🪄</button>
+  </div>
 </div>
+
 <h2>Installation</h2>
         <p>Include the library via CDN:</p>
         <pre><code>&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.0/dist/cursorly.min.js"&gt;&lt;/script&gt;</code></pre>
@@ -271,8 +295,9 @@ cursor.enable();</code></pre>
 
 
 <script>
-    const cursor = Cursorly.init({ cursor: 0, effect: { name: 'firing' } });
-    cursor.setEffect({ name: 'emoji', shape: '✨' });
+    // const cursor = Cursorly.init({ cursor: 0, effect: { name: 'trail' } });
+    // cursor.setEffect({ name: 'emoji', shape: '👻' });
+    const cursor = Cursorly.init(); 
     function runEditor() {
         try {
             eval(document.getElementById("cursorConfig").value);
