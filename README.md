@@ -8,6 +8,7 @@
 
 - Custom cursor icons with multiple choices.
 - Optional particle effects (`trail`, `sparkle`, or `none`).
+- Optional Emoji effects (Both default and customizable).
 - Fully configurable particle options: `density`, `size`, `decay`, `hueStep`.
 - Enable/disable cursor and particle effects dynamically.
 - Fullscreen, high-performance canvas that doesn’t interfere with page interactions.
@@ -32,9 +33,21 @@ Include via **CDN**:
 Initialize the cursor with default options:
 
 ```javascript
+const cursor = Cursorly.init();
+```
+OR, Initialize with custom icon and effect:
+
+```javascript
 const cursor = Cursorly.init({
     cursor: 0, // Index of the cursor icon (default: 0)
     effect: { name: "trail", color: "rainbow" } // Effect name and color are required
+});
+```
+OR, Initialize with custom icon and emoji effect
+```
+const cursor = Cursorly.init({
+    cursor: 0,
+    effect: { name: "emoji", shape:"👻"}
 });
 ```
 
@@ -46,18 +59,30 @@ Cursorly supports multiple icons. Change icon dynamically:
 cursor.setIcon(1); // Change to icon index 1 
 ```
 
-### **Particle Effects**
+### **Default Effects**
 ---
 Effect options (only name and color are required):
 
 ```javascript
 cursor.setEffect({
-    name: "sparkle",   // 'trail', 'sparkle', or 'none'
+    name: "sparkle",   // 'trail', 'sparkle', or 'emojiSnow',etc
     color: "#ff4081",  // Hex color or "rainbow"
     density: 10,       // Optional, number of particles per mouse move
     size: [3, 12],     // Optional, min and max particle size
     decay: 0.92,       // Optional, particle shrink rate
-    hueStep: 5         // Optional, rainbow hue change speed
+});
+```
+### **Custom Emoji Effects**
+---
+Effect options (only name and shape are required):
+
+```javascript
+cursor.setEffect({
+    name: "emoji",   // required, use 'emoji' always for custom emoji effect
+    shape: "👻",     // required, put desired emoji
+    density: 10,       // Optional, number of particles per mouse move
+    size: [3, 12],     // Optional, min and max particle size
+    decay: 0.92,       // Optional, particle shrink rate
 });
 ```
 Disable or enable effects dynamically::

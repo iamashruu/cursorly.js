@@ -186,22 +186,37 @@ cursor.setEffect({name:"trail", color:"rainbow", density:8, size:[2,8]});
 // Initialization with default icons and effect
 const cursor = Cursorly.init();
 
-//Initialize with custom icon and effect
+// OR, Initialize with custom icon and effect:
 const cursor = Cursorly.init({
-    cursor: 0,
-    effect: { name: "trail", color: "rainbow" }
+    cursor: 0, // Index of the cursor icon (default: 0)
+    effect: { name: "trail", color: "rainbow" } // Effect name and color are required
 });
 
+// OR, Initialize with custom icon and emoji effect
+const cursor = Cursorly.init({
+    cursor: 0,
+    effect: { name: "emoji", shape:"👻"}
+});
 
-// Switch cursor icon dynamically
+// Change cursor icon dynamically
 cursor.setIcon(1);
 
 // Change particle effect dynamically
 cursor.setEffect({
-    name: "sparkle",
-    color: "#ff4081",
-    density: 10,
-    size: [3, 12]
+    name: "sparkle",   // 'trail', 'sparkle', or 'emojiSnow',etc
+    color: "#ff4081",  // Hex color or "rainbow"
+    density: 10,       // Optional, number of particles per mouse move
+    size: [3, 12],     // Optional, min and max particle size
+    decay: 0.92,       // Optional, particle shrink rate
+});
+
+// Set custom emoji effect
+cursor.setEffect({
+    name: "emoji",   // 'trail', 'sparkle', or 'none'
+    shape: "👻",     // emoji
+    density: 10,       // Optional, number of particles per mouse move
+    size: [3, 12],     // Optional, min and max particle size
+    decay: 0.92,       // Optional, particle shrink rate
 });
 
 //Disable or enable effects dynamically::
