@@ -2,6 +2,8 @@
 
 **Cursorly.js** is a lightweight, customizable JavaScript library for creating **custom mouse cursors with optional particle effects**. It supports multiple cursor icons, dynamic effects, and easy integration with any web project.
 
+![Cursorly.js Demo](assets/collections/cursorly.js-v1.0.1-video.gif)
+
 ---
 
 ## **Features**
