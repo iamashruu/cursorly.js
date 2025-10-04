@@ -6,108 +6,32 @@
 <title>Cursorly.js - Creating Customizable Cursor Effects</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<style>
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #0f121b; color: #e0e0e0; line-height: 1.6; }
-
-/* Navbar */
-nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 2rem; background: #0f121b; position: sticky; top: 0;
-    border-bottom: 1px solid #1fc8db30; z-index: 1000;
-}
-nav .logo { font-size: 1.4rem; font-weight: 600; color: #1fc8db; }
-nav a { color: #e0e0e0; margin-left: 1rem; text-decoration: none; transition: color 0.2s; }
-nav a:hover { color: #1fc8db; }
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #0da8a1, #1fc8db);
-    color: white; padding: 3rem 1rem 2rem 1rem; text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; font-weight: 600; }
-header p { font-size: 1.2rem; color: #d0f0f5; }
-
-/* Container */
-.container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-
-/* Headings */
-h2 { margin: 2rem 0 1rem 0; color: #1fc8db; font-weight: 600; }
-
-/* Features */
-ul.features { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-ul.features li {
-    background: #1b1f2e; padding: 1.2rem; border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s, background 0.2s;
-    display: flex; align-items: center; gap: 0.8rem;
-}
-ul.features li:hover { transform: translateY(-3px); background: #1fc8db20; }
-ul.features i { font-size: 1.5rem; color: #1fc8db; }
-
-/* Code */
-pre { background: #1b1f2e; color: #f8f8f2; padding: 1rem; border-radius: 10px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-
-/* Example Cards */
-.example { background: #1b1f2e; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); margin-bottom: 2rem; }
-.example h3 { color: #ffffff; margin-bottom: 1rem; }
-
-/* Buttons */
-button {
-    margin: 0.4rem 0.4rem 0.4rem 0; padding: 0.5rem 1rem; border: none;
-    background: #0da8a1; color: white; border-radius: 6px; cursor: pointer; font-weight: 600;
-    transition: all 0.2s ease;
-}
-button:hover { background: #1fc8db; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
-
-/* Button grids */
-.button-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
-
-/* Cursor Icon Gallery */
-.icon-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1rem; }
-.icon-gallery div {
-    background: #2c3552; border: 2px solid #1fc8db50; padding: 1rem; border-radius: 8px;
-    text-align: center; cursor: pointer; transition: all 0.2s;
-}
-.icon-gallery div:hover { border-color: #1fc8db; transform: scale(1.05); }
-.icon-gallery img { width: 40px; height: 40px; margin-bottom: 0.5rem; }
-
-/* Interactive Editor */
-.editor textarea { width: 100%; min-height: 120px; background: #1b1f2e; border: 1px solid #1fc8db50; color: #e0e0e0; padding: 1rem; border-radius: 8px; font-family: 'JetBrains Mono', monospace; margin-bottom: 1rem; resize: vertical; }
-.editor button { width: 100%; }
-
-/* Footer */
-footer { text-align: center; margin: 4rem 0 2rem; color: #777; font-size: 0.9rem; }
-footer a { color: #1fc8db; margin: 0 0.5rem; font-size: 1.2rem; }
-footer a:hover { color: #0da8a1; }
-
-</style>
+<link rel="stylesheet" href="./assets/css/style.css">
+<meta name="description" content="Cursorly.js is a lightweight JavaScript library that replaces the default browser cursor with customizable icons and interactive particle effects like trail or sparkle.">
+<meta name="keywords" content="Cursorly.js, custom cursor, cursor effects, JavaScript library, particle effects, web design, UI design, interactive cursor, cursor customization">
+<meta name="author" content="Ashraf">   
 </head>
 <body>
 
 <!-- Navbar -->
 <nav>
-  <div class="logo">Cursorly.js</div>
+<div class="logo"><img src="./assets/images/logo-rmbg.png" alt="Cursorly.js Logo" width="200"></div>
   <div class="links">
     <a href="#about">About</a>
     <a href="#features">Features</a>
     <a href="#examples">Examples</a>
-    <a href="https://github.com/iamashruu/cursorly.js" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://github.com/iamashruu/cursorly.js" target="_blank"><i class="fab fa-github"></i></a>
   </div>
 </nav>
 
 <!-- Header -->
 <header id="about">
     <h1 >What is Cursorly.js?</h1>
-    <p>Custom CURSOR library with optional effects,Show magic with mouse / cursor.</p>
+    <p>Customize cursor with optional effects. Show magic with your mouse / cursor!</p>
     <p>Cursorly.js is a lightweight JavaScript library that replaces the default browser cursor with customizable icons and interactive particle effects like trail or sparkle. It’s designed to be developer-friendly, flexible, and fun — perfect for creative websites, portfolios, or experimental UI design.</p>
 </header>
 
 <div class="container">
-
-
-
 <!-- Features -->
 <h2 id="features">Features</h2>
 <ul class="features">

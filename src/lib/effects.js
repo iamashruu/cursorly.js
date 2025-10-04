@@ -126,7 +126,7 @@ export const effectsData = [
     "shape": "💖",
     "color": "white",
     "density": 3,
-    "size": [3, 6],
+    "size": [2, 4],
     "decay": 0.85,
     "type": "emoji"
   },
@@ -154,7 +154,7 @@ export const effectsData = [
     "color": "white",
     "density": 3,
     "size": [1, 2],
-    "decay": 0.95,
+    "decay": 0.9,
     "type": "emoji"
   },
   {
@@ -163,7 +163,7 @@ export const effectsData = [
     "color": "white",
     "density": 3,
     "size": [2, 4],
-    "decay": 0.95,
+    "decay": 0.9,
     "type": "emoji"
   }
 ];
