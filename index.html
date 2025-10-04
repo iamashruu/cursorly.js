@@ -124,10 +124,16 @@
     <button onclick="cursor.setEffect({name:'emojiMagic', shape:'🪄'})">emojiMagic 🪄</button>
   </div>
 
-  <h3>Custom Emoji Effects</h3>
-  
-  <p>Click on an emoji to set it as the cursor effect:</p>
-  <div class="emoji-grid"></div>
+    <h3>Custom Emoji Effects</h3>
+    <p>How to set a custom emoji effect:</p>
+    <pre><code>// Initialize first if not done yet
+const cursor = Cursorly.init();
+// Set custom emoji effect
+cursor.setEffect({name:"emoji", shape:"👻", size:[2,4]});
+// Keep your emoji in shape and it's required, size, density,decay,color is optional.
+    </code></pre>
+    <p>Click on an emoji to set it as the cursor effect:</p>
+    <div class="emoji-grid"></div>
 
 </div>
 
@@ -159,10 +165,7 @@
             &lt;/head&gt;
             &lt;body&gt;
                 &lt;script&gt;
-                    const cursor = Cursorly.init({
-                        cursor: 0,
-                        effect: { name: "trail", color: "rainbow" }
-                    });
+                    const cursor = Cursorly.init();
                 &lt;/script&gt;
             &lt;/body&gt;
         &lt;/html&gt;</code></pre>
@@ -180,14 +183,15 @@ cursor.setEffect({name:"trail", color:"rainbow", density:8, size:[2,8]});
 <!-- Code Snippets -->
 <h2>Code Snippets</h2>
 <pre><code>
-//Initialize
+// Initialization with default icons and effect
+const cursor = Cursorly.init();
+
+//Initialize with custom icon and effect
 const cursor = Cursorly.init({
     cursor: 0,
     effect: { name: "trail", color: "rainbow" }
 });
 
-// alternate with default values
-const cursor = Cursorly.init();
 
 // Switch cursor icon dynamically
 cursor.setIcon(1);
