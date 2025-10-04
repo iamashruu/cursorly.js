@@ -73,6 +73,7 @@ button:hover { background: #1fc8db; transform: translateY(-2px); box-shadow: 0 4
 /* Footer */
 footer { text-align: center; margin: 4rem 0 2rem; color: #777; font-size: 0.9rem; }
 footer a { color: #1fc8db; margin: 0 0.5rem; font-size: 1.2rem; }
+footer img { vertical-align: middle; }
 footer a:hover { color: #0da8a1; }
 
 
