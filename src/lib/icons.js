@@ -1,5 +1,4 @@
-{
-    "icons": [
+export const iconsData = [
         "https://img.icons8.com/softteal-color/24/blue-pointer.png",
         "https://img.icons8.com/keek/100/cursor.png",
         "https://img.icons8.com/quill/100/cursor.png",
@@ -42,6 +41,17 @@
         "https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/64/external-click-on-touchscreen-isolate-on-a-white-background-touch-tritone-tal-revivo.png",
         "https://img.icons8.com/external-tal-revivo-green-tal-revivo/36/external-click-on-touchscreen-isolate-on-a-white-background-touch-green-tal-revivo.png",
         "https://img.icons8.com/external-avoca-kerismaker/64/external-Direct-cursor-creativity-avoca-kerismaker.png"
-    ]
-  }
-  
+    ];
+
+export function getIcon(index = 0) {
+    const safeIndex = Math.max(0, Math.min(index, iconsData.length - 1));
+    return iconsData[safeIndex];
+}
+
+export function preloadIcons() {
+    iconsData.forEach(url => {
+        const img = new Image();
+        img.src = url;
+    });
+}
+

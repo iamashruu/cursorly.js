@@ -271,7 +271,8 @@ cursor.enable();</code></pre>
 
 
 <script>
-    const cursor = Cursorly.init({ cursor: 0, effect: { name: 'trail' } });
+    const cursor = Cursorly.init({ cursor: 0, effect: { name: 'firing' } });
+    cursor.setEffect({ name: 'emoji', shape: '✨' });
     function runEditor() {
         try {
             eval(document.getElementById("cursorConfig").value);
