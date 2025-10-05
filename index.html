@@ -246,9 +246,34 @@ cursor.enable();</code></pre>
 
 
 <script>
-    // const cursor = Cursorly.init({ cursor: 0, effect: { name: 'trail' } });
+    const cursor = Cursorly.init({ cursor: '0', effect: { name: 'trail' } });
     // cursor.setEffect({ name: 'emoji', shape: '👻' });
-    const cursor = Cursorly.init(); 
+    // const cursor = Cursorly.init(); 
+    // const emojiButterfly = {
+    //     name: "emojiButterfly",
+    //     shape: "🦋",
+    //     color: "white",
+    //     density: 4,
+    //     size: [2, 5],
+    //     decay: 0.85,
+    //     type: "emoji",
+    // };
+
+    // cursor.setEffect(emojiButterfly);
+    // cursor.setIcon(1);
+
+    // const starlightBurst = {
+    //     name: "starlightBurst",
+    //     color: ["#ffcc00", "#ffffff", "#ff99ff"],
+    //     density: 8,
+    //     size: [3, 9],
+    //     decay: 0.9,
+    //     type: "default"
+    // };
+
+
+    // cursor.setEffect(starlightBurst);
+
     function runEditor() {
         try {
             eval(document.getElementById("cursorConfig").value);
