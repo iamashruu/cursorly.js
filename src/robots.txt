@@ -1,0 +1,9 @@
+# Allow all web crawlers full access
+User-agent: *
+Allow: /
+
+# Prevent indexing of internal assets folder if desired
+Disallow: /lib/
+
+# Sitemap location
+Sitemap: https://cursorlyjs.onrender.com/sitemap.xml
