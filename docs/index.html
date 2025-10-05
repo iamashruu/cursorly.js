@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursorly.js - Creating Customizable Cursor Effects</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icon.png">
+    <meta name="description" content="Cursorly.js is a lightweight JavaScript library that replaces the default browser cursor with customizable icons and interactive particle effects like trail or sparkle. and also supports custom emoji effects.">
+    <meta name="keywords" content="Cursorly.js, custom cursor, cursor effects, JavaScript library, particle effects, custom emojis, interactive cursor, cursor customization">
+    <meta name="author" content="Ashraf"> 
+    <style>
+        h1 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #cccccc;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #b0b0b0;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul, ol {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #b0b0b0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            color: #b0b0b0;
+        }
+
+        pre {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        code {
+            background-color: #1a1a1a;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #333, transparent);
+            margin: 40px 0;
+        }
+
+        .intro {
+            text-align: justify;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            color: #cccccc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #444;
+        }
+
+        .highlight {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+<div class="logo"><img src="../assets/images/logo-rmbg.png" alt="Cursorly.js Logo" width="200"></div>
+  <div class="links">
+    <a href="../index.html">Home</a>
+    <a href="https://github.com/iamashruu/cursorly.js" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+</nav>
+    <div class="container">
+        <h1>Cursorly.js - Customize cursor with multiple effects, emojis and more!</h1>
+        
+        <div class="intro">
+            <p><strong>Cursorly.js</strong> is a lightweight, customizable JavaScript library for creating <strong>custom cursors</strong> with <strong>animated trails, emojis, and visual effects</strong>. It supports multiple cursor icons, dynamic effects,custom emoji and easy integration with any web project.</p>
+        </div>
+
+        <h2>🚀 Features</h2>
+        <ul>
+            <li>🧩 40+ built-in cursor icons</li>
+            <li>💥 15+ ready-to-use visual effects</li>
+            <li>💫 Emoji particle support</li>
+            <li>⚙️ Easy configuration & real-time customization</li>
+            <li>🪄 Fully extensible — define your own effects!</li>
+            <li>🪶 Lightweight & dependency-free</li>
+        </ul>
+
+        <h2>🎨 Built-in Effects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Effect Name</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>trail</td><td>Rainbow particle trail</td><td>default</td></tr>
+                <tr><td>sparkle</td><td>Glitter sparkle effect</td><td>default</td></tr>
+                <tr><td>emoji</td><td>Emoji trail (✨)</td><td>emoji</td></tr>
+                <tr><td>firing</td><td>Fire-like explosion</td><td>firing</td></tr>
+                <tr><td>circle</td><td>Circular light trail</td><td>circle</td></tr>
+                <tr><td>none</td><td>Disables particle effect</td><td>default</td></tr>
+                <tr><td>neonGlow</td><td>Neon-style glow</td><td>default</td></tr>
+                <tr><td>fireworks</td><td>Multi-color burst</td><td>default</td></tr>
+                <tr><td>snowfall</td><td>Soft white snow</td><td>default</td></tr>
+                <tr><td>aura</td><td>Gradient aura</td><td>default</td></tr>
+                <tr><td>comet</td><td>Comet trail</td><td>default</td></tr>
+                <tr><td>emojiHearts</td><td>💖 trail</td><td>emoji</td></tr>
+                <tr><td>emojiStars</td><td>⭐ trail</td><td>emoji</td></tr>
+                <tr><td>emojiFire</td><td>🔥 trail</td><td>emoji</td></tr>
+                <tr><td>emojiSnow</td><td>❄️ trail</td><td>emoji</td></tr>
+                <tr><td>emojiMagic</td><td>🪄 trail</td><td>emoji</td></tr>
+            </tbody>
+        </table>
+
+        <h3><strong>Browser Support</strong></h3>
+        
+        <p>Cursorly.js works in all modern browsers (Chrome, Firefox, Safari, Edge).</p>
+
+        <h2><strong>Installation</strong></h2>
+        <p>Include via <strong>CDN</strong>:</p>
+        <pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h2><strong>Basic Usage</strong></h2>
+        <p>Initialize the cursor with default options:</p>
+        <pre><code class="language-javascript">const cursor = Cursorly.init();</code></pre>
+
+        <p>OR, Initialize with custom icon and effect:</p>
+        <pre><code class="language-javascript">const cursor = Cursorly.init({
+    cursor: 0, // Index of the cursor icon (default: 0)
+    effect: { name: "trail", color: "rainbow" } // Effect name and color are required
+});</code></pre>
+
+        <p>OR, Initialize with custom icon and emoji effect</p>
+        <pre><code class="language-javascript">const cursor = Cursorly.init({
+    cursor: 0,
+    effect: { name: "emoji", shape:"👻"}
+});</code></pre>
+
+        <h3><strong>Cursor Icons</strong></h3>
+        
+        <p>Cursorly supports multiple icons. Change icon dynamically:</p>
+        <pre><code class="language-javascript">cursor.setIcon(1); // Change to icon index 1</code></pre>
+
+        <h3><strong>Default Effects</strong></h3>
+        
+        <p>Effect options (only name and color are required):</p>
+        <pre><code class="language-javascript">cursor.setEffect({
+    name: "sparkle",   // 'trail', 'sparkle', or 'emojiSnow',etc
+    color: "#ff4081",  // Hex color or "rainbow"
+    density: 10,       // Optional, number of particles per mouse move
+    size: [3, 12],     // Optional, min and max particle size
+    decay: 0.92,       // Optional, particle shrink rate
+});</code></pre>
+
+        <h2>🧩 Creating Custom Effects</h2>
+        <p>You can define custom effects using the same structure as built-ins.</p>
+        <pre><code class="language-javascript">const starlightBurst = {
+        name: "starlightBurst",
+        color: ["#ffcc00", "#ffffff", "#ff99ff"],
+        density: 8,
+        size: [3, 9],
+        decay: 0.9,
+        type: "default"
+};
+
+cursor.setEffect(starlightBurst);</code></pre>
+
+        <h2>💎 Emoji List</h2>
+        <p>Cursorly includes an emoji selector with 100+ emojis ready to use in effects, including:<br>
+        ✨ 🔥 💖 ❄️ ⭐ 🪄 🤖 🌈 💫 🦋 ⚡ 🍀 🎉 🌸 💎 🎈 🌟 🧠 🕹️ 🌼 🌺 🌻 🧊 🫧 🪐 ☄️</p>
+
+        <h3><strong>Custom Emoji Effects</strong></h3>
+        
+        <p>CursorlyJS supports <strong>custom emoji effects</strong> out of the box.<br>
+        You can easily create and set them dynamically.</p>
+        <pre><code class="language-javascript">const emojiButterfly = {
+  name: "emojiButterfly",
+  shape: "🦋",
+  color: "white",
+  density: 4,
+  size: [2, 5],
+  decay: 0.85,
+  type: "emoji",
+};
+
+cursor.setEffect(emojiButterfly);</code></pre>
+        <p>👉 That's it — no registration needed!</p>
+
+        <p>Alternatively, you can also set a custom emoji effect like this way (only name='emoji' and shape='your desired emoji' are required):</p>
+        <pre><code class="language-javascript">cursor.setEffect({
+    name: "emoji",   // required, use 'emoji' always for custom emoji effect
+    shape: "👻",     // required, put desired emoji
+    density: 10,       // Optional, number of particles per mouse move
+    size: [3, 12],     // Optional, min and max particle size
+    decay: 0.92,       // Optional, particle shrink rate
+});</code></pre>
+
+        <p>Disable or enable effects dynamically::</p>
+        <pre><code class="language-javascript">cursor.disableEffect(); // Turn off particle effects
+cursor.enableEffect();  // Turn on particle effects</code></pre>
+
+        <h3><strong>Enable/Disable Cursor</strong></h3>
+        
+        <p>Cursorly supports multiple icons. Change icon dynamically:</p>
+        <pre><code class="language-javascript">cursor.disable(); // Hide custom cursor, revert to default
+cursor.enable();  // Show custom cursor again</code></pre>
+
+        <h2>🧠 Contribution</h2>
+        <p>We welcome contributions from the community!</p>
+        <ol>
+            <li>Fork the repo</li>
+            <li>Add your custom icons or effects</li>
+            <li>Submit a PR with a short demo and description</li>
+        </ol>
+
+        <h2>🏷️ Tags</h2>
+        <div class="tags">
+            <span class="tag">#javascript</span>
+            <span class="tag">#webdev</span>
+            <span class="tag">#frontend</span>
+            <span class="tag">#cursor</span>
+            <span class="tag">#cursoranimation</span>
+            <span class="tag">#library</span>
+            <span class="tag">#opensource</span>
+            <span class="tag">#cursoreffects</span>
+            <span class="tag">#emoji</span>
+            <span class="tag">#cursorparticles</span>
+            <span class="tag">#cursorly</span>
+            <span class="tag">#customcursor</span>
+        </div>
+
+        <h2>🧡 License</h2>
+        <p>MIT © 2025 [Ashraf]</p>
+
+        <div class="highlight">
+            <p><strong>CursorlyJS</strong> — Because your pointer deserves some personality ✨</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+         Cursorly.js • Developed by Ashraf • 
+        <a href="https://github.com/iamashruu" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/iamashruu" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </footer>
+</body>
+</html></div>
