@@ -52,6 +52,7 @@ const iifeConfig = {
   output: {
     file: 'dist/cursorly.min.js',
     format: 'iife',
+    name: 'Cursorly',
     sourcemap: true
   },
   plugins: [...plugins, terser()]

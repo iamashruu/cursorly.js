@@ -2,6 +2,6 @@ old/
 src/
 rollup.config.js
 node_modules/
-*.map
+/dist/*.map
 .DS_Store
 .vscode/
