@@ -2,7 +2,7 @@
 
 **Cursorly.js** is a lightweight, customizable JavaScript library for creating **custom cursors** with **animated trails, emojis, and visual effects**. It supports multiple cursor icons, dynamic effects,custom emoji and easy integration with any web project.
 
-![Cursorly.js Demo](./src/assets/collections/cursorly.js-v1.0.1-video.gif)
+![Cursorly Demo](https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@master/src/assets/collections/cursorly.js-v1.0.1-video.gif)
 
 ---
 ## 🚀 Features

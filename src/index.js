@@ -61,7 +61,21 @@ class Cursorly {
     disableEffect() { this.particlesEnabled = false; }
 }
 
-// Global Init
-window.Cursorly = {
-    init: (options) => new Cursorly(options)
-};
+// === Universal Export Section ===
+
+// Local init function
+function init(options = {}) {
+  return new Cursorly(options);
+}
+
+// Named export for ES module environments (React, Next.js, etc.)
+export { init as CursorlyInit };
+
+// Attach global version safely for CDN/browser
+if (typeof window !== "undefined") {
+  if (!window.Cursorly) {
+    window.Cursorly = {};
+  }
+  // only attach init, do not overwrite the whole object
+  window.Cursorly.init = init;
+}
