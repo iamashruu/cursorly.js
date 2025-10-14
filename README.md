@@ -1,10 +1,11 @@
 # Cursorly.js
 
-**Cursorly.js** is a lightweight, customizable JavaScript library for creating **custom cursors** with **animated trails, emojis, and visual effects**. It supports multiple cursor icons, dynamic effects,custom emoji and easy integration with any web project.
+**Cursorly.js** is a lightweight, customizable JavaScript library for creating **custom cursors** with **animated trails, emojis, and visual effects**.
+It supports multiple cursor icons, dynamic effects, custom emojis, and easy integration with any web project.
 
 ![Cursorly Demo](https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@master/src/assets/collections/cursorly.js-v1.0.1-video.gif)
 
----
+
 ## 🚀 Features
 
 - 🧩 40+ built-in cursor icons  
@@ -13,11 +14,12 @@
 - ⚙️ Easy configuration & real-time customization  
 - 🪄 Fully extensible — define your own effects!  
 - 🪶 Lightweight & dependency-free  
----
+
+
 ## 🎨 Built-in Effects
 
 | Effect Name | Description | Type |
-|---------|-------------|------|
+|--------------|-------------|------|
 | trail | Rainbow particle trail | default |
 | sparkle | Glitter sparkle effect | default |
 | emoji | Emoji trail (✨) | emoji |
@@ -35,12 +37,12 @@
 | emojiSnow | ❄️ trail | emoji |
 | emojiMagic | 🪄 trail | emoji |
 
----
-### **Browser Support**
----
+
+## Browser Support
+
 Cursorly.js works in all modern browsers (Chrome, Firefox, Safari, Edge).
 
-## **Installation**
+## Installation
 
 Include via **CDN**:
 
@@ -49,40 +51,72 @@ Include via **CDN**:
 ```
 
 
-## **Basic Usage**
+## Basic Usage
 
 Initialize the cursor with default options:
 
 ```javascript
 const cursor = Cursorly.init();
 ```
-OR, Initialize with custom icon and effect:
+### 🎛️ Initialize with Built-in Icon and Effect
+
+Use one of the built-in icons and apply any visual effect:
 
 ```javascript
 const cursor = Cursorly.init({
-    cursor: 0, // Index of the cursor icon (default: 0)
-    effect: { name: "trail", color: "rainbow" } // Effect name and color are required
+    cursor: 0, // Index of the built-in cursor icon (default: 0)
+    effect: { name: "trail", color: "rainbow" } // Apply a built-in effect. Name and color are required
 });
 ```
-OR, Initialize with custom icon and emoji effect
-```
+Or with an **emoji-based effect**:
+```javascript
 const cursor = Cursorly.init({
-    cursor: 0,
+    cursor: 0, // Built-in icon index
     effect: { name: "emoji", shape:"👻"}
 });
 ```
 
-### **Cursor Icons**
----
-Cursorly supports multiple icons. Change icon dynamically:
+> *This setup uses the built-in icons included with Cursorly.  
+To use your own image or PNG/SVG icon, see the next section.*
+
+
+### 🖼️ Add a Custom Cursor Icon
+
+You can add your own **custom cursor image** (PNG, SVG, etc.) from any URL or local asset path.
 
 ```javascript
-cursor.setIcon(1); // Change to icon index 1 
+const cursor = Cursorly.init();
+
+// Add your own image as a new cursor icon
+const cursorIndex = cursor.addIcon('https://img.icons8.com/?size=100&id=52516&format=png&color=000000');
+
+// Activate your custom icon
+cursor.setIcon(cursorIndex);
 ```
 
-### **Default Effects**
----
-Effect options (only name and color are required):
+You can register multiple icons and switch between them dynamically:
+
+```javascript
+const custom1 = cursor.addIcon('icon1.png');
+const custom2 = cursor.addIcon('icon2.svg');
+cursor.setIcon(custom2); // Switch to another custom icon
+```
+
+> The method `cursor.addIcon()` returns the index of your new icon so you can reference it later.
+
+
+### 🔁 Switching Between Icons
+
+Change between any previously registered icons (built-in or custom):
+
+```javascript
+cursor.setIcon(1); // Change to built-in icon index 1
+cursor.setIcon(cursorIndex); // Switch to your custom icon
+```
+
+### Default Effects
+
+Effect options (only `name` and `color` are required):
 
 ```javascript
 cursor.setEffect({
@@ -96,7 +130,7 @@ cursor.setEffect({
 
 ## 🧩 Creating Custom Effects
 
-You can define custom effects using the same structure as built-ins.
+You can define your own effects using the same structure as built-ins:
 
 ```js
 const starlightBurst = {
@@ -110,15 +144,19 @@ const starlightBurst = {
 
 cursor.setEffect(starlightBurst);
 ```
+
+> You can register unlimited custom effects — Cursorly is fully extensible.
+
+
 ## 💎 Emoji List
 
 Cursorly includes an emoji selector with 100+ emojis ready to use in effects, including:
 ✨ 🔥 💖 ❄️ ⭐ 🪄 🤖 🌈 💫 🦋 ⚡ 🍀 🎉 🌸 💎 🎈 🌟 🧠 🕹️ 🌼 🌺 🌻 🧊 🫧 🪐 ☄️
 
-### **Custom Emoji Effects**
----
-CursorlyJS supports **custom emoji effects** out of the box.  
-You can easily create and set them dynamically.
+### 🦋 Custom Emoji Effects
+
+CursorlyJS supports **custom emoji effects** out of the box.
+You can easily create and set them dynamically:
 
 ```js
 const emojiButterfly = {
@@ -148,21 +186,24 @@ cursor.setEffect({
     decay: 0.92,       // Optional, particle shrink rate
 });
 ```
-Disable or enable effects dynamically::
+
+Disable or enable effects dynamically:
+
 ```javascript
 cursor.disableEffect(); // Turn off particle effects
 cursor.enableEffect();  // Turn on particle effects
 ```
 ---
-### **Enable/Disable Cursor**
----
-Cursorly supports multiple icons. Change icon dynamically:
+
+## Enable / Disable Cursor
+
+Cursorly supports toggling the custom cursor easily:
 
 ```javascript
 cursor.disable(); // Hide custom cursor, revert to default
 cursor.enable();  // Show custom cursor again
 ```
-## 🧠 Contribution
+## 🧑‍💻 Contribution
 We welcome contributions from the community!
 1. Fork the repo  
 2. Add your custom icons or effects  
@@ -172,7 +213,8 @@ We welcome contributions from the community!
 
 ## 🏷️ Tags
 
-`#javascript` `#webdev` `#frontend` `#cursor` `#cursoranimation` `#library` `#opensource` `#cursoreffects` `#emoji` `#cursorparticles` `#cursorly` `#customcursor`
+`#javascript` `#webdev` `#frontend` `#cursor` `#cursoranimation` `#library`  
+`#opensource` `#cursoreffects` `#emoji` `#cursorparticles` `#cursorly` `#customcursor`
 
 ---
 
@@ -183,4 +225,3 @@ MIT © 2025 [Ashraf]
 ---
 
 **CursorlyJS** — Because your pointer deserves some personality ✨
-

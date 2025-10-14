@@ -1,6 +1,6 @@
 {
     "name": "cursorly.js",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Custom cursor library with effects and icons using javascript",
     "type": "module",
     "main": "dist/cursorly.umd.js",      
