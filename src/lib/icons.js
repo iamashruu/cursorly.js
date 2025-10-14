@@ -48,10 +48,26 @@ export function getIcon(index = 0) {
     return iconsData[safeIndex];
 }
 
-export function preloadIcons() {
-    iconsData.forEach(url => {
-        const img = new Image();
-        img.src = url;
-    });
-}
+export async function preloadIcons(urls) {
+  const list = Array.isArray(urls) ? urls : [urls];
 
+  const loaders = list.map(
+    (url) =>
+      new Promise<string>((resolve, reject) => {
+        if (typeof url !== "string" || !url.startsWith("http")) {
+          return reject(new Error(`Invalid image URL: ${url}`));
+        }
+
+        const img = new Image();
+        img.onload = () => resolve(url);
+        img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
+        img.src = url;
+      })
+  );
+
+  return Promise.allSettled(loaders).then((results) =>
+    results
+      .filter((r) => r.status === "fulfilled")
+      .map((r) => r.value)
+  );
+}
