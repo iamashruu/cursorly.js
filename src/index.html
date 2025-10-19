@@ -246,10 +246,16 @@ cursor.enable();</code></pre>
 
 
 <script>
-    console.log(Cursorly);
-    const cursor = Cursorly.init({ cursor: '0', effect: { name: 'trail' } });
+    // console.log(Cursorly);
+    // const cursor = Cursorly.init({ cursor: '0', effect: { name: 'trail' } });
     // cursor.setEffect({ name: 'emoji', shape: '👻' });
-    // const cursor = Cursorly.init(); 
+    const cursor = Cursorly.init(); 
+    // Add your own image as a new cursor icon 
+    // const cursorIndex = cursor.addIcon('./assets/images/icon.png');
+    // const cursorIndex = cursor.addIcon('https://img.icons8.com/?size=100&id=52516&format=png&color=000000');
+
+    // Activate your custom icon
+    cursor.setIcon(cursorIndex);
     // const emojiButterfly = {
     //     name: "emojiButterfly",
     //     shape: "🦋",

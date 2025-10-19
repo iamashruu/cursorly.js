@@ -38,7 +38,7 @@ import { getEffectDefaults, effectsList } from './effects.js';
 import { preloadIcons } from './icons.js';
 
 export function addIcon(lib, url) {
-    if (typeof url === 'string' && url.startsWith('http')) {
+    if (typeof url === 'string' || url.startsWith('http')) {
         lib.cursorIcons.push(url);
         preloadIcons(url);
         return lib.cursorIcons.length - 1; // Return the index of the newly added icon

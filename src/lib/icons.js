@@ -53,7 +53,7 @@ export async function preloadIcons(urls) {
 
   const loaders = list.map(
     (url) =>
-      new Promise<string>((resolve, reject) => {
+      new Promise((resolve, reject) => {
         if (typeof url !== "string" || !url.startsWith("http")) {
           return reject(new Error(`Invalid image URL: ${url}`));
         }
