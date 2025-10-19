@@ -166,6 +166,15 @@
             margin: 20px 0;
         }
 
+        blockquote.tip {
+            border-left: 4px solid #4f46e5;
+            background: #1a1a1a;
+            padding: 12px 16px;
+            border-radius: 6px;
+            color: #cbd5e1;
+            margin: 16px 0;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px 15px;
@@ -183,18 +192,26 @@
 </head>
 <body>
     <nav>
-<div class="logo"><img src="./assets/images/logo-rmbg.png" alt="Cursorly.js Logo" width="200"></div>
-  <div class="links">
-    <a href="./index.html">Home</a>
-    <a href="https://github.com/iamashruu/cursorly.js" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
-</nav>
+      <div class="logo"><img src="./assets/images/logo-rmbg.png" alt="Cursorly.js Logo" width="200"></div>
+      <div class="links">
+        <a href="./index.html">Home</a>
+        <a href="https://github.com/iamashruu/cursorly.js" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </nav>
+
     <div class="container">
-        <h1>Cursorly.js - Customize cursor with multiple effects, emojis and more!</h1>
+        <h1>🎯 Cursorly.js</h1>
         
         <div class="intro">
-            <p><strong>Cursorly.js</strong> is a lightweight, customizable JavaScript library for creating <strong>custom cursors</strong> with <strong>animated trails, emojis, and visual effects</strong>. It supports multiple cursor icons, dynamic effects,custom emoji and easy integration with any web project.</p>
+            <p><strong>Cursorly.js</strong> is a lightweight, customizable JavaScript library for creating <strong>custom cursors</strong> with <strong>animated trails, emojis, and visual effects</strong>.<br>It supports multiple cursor icons, dynamic effects, <strong>custom emojis</strong>, and easy integration with any web project.</p>
         </div>
+
+        <!-- Demo image from markdown -->
+        <p>
+          <img src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@master/src/assets/collections/cursorly.js-v1.0.1-video.gif" alt="Cursorly Demo">
+        </p>
+
+        <hr>
 
         <h2>🚀 Features</h2>
         <ul>
@@ -235,67 +252,87 @@
             </tbody>
         </table>
 
-        <h3><strong>Browser Support</strong></h3>
-        
+        <h3>🧭 Browser Support</h3>
         <p>Cursorly.js works in all modern browsers (Chrome, Firefox, Safari, Edge).</p>
 
-        <h2><strong>Installation</strong></h2>
+        <h2>⚙️ Installation</h2>
         <p>Include via <strong>CDN</strong>:</p>
         <pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"&gt;&lt;/script&gt;</code></pre>
 
-        <h2><strong>Basic Usage</strong></h2>
+        <p>Or install via <strong>NPM</strong>:</p>
+        <pre><code class="language-bash">npm install cursorly.js</code></pre>
+
+        <h2>🧩 Basic Usage</h2>
         <p>Initialize the cursor with default options:</p>
         <pre><code class="language-javascript">const cursor = Cursorly.init();</code></pre>
 
-        <p>OR, Initialize with custom icon and effect:</p>
+        <h3>🎛️ Initialize with Built-in Icon and Effect</h3>
+        <p>Use one of the built-in icons and apply any visual effect:</p>
         <pre><code class="language-javascript">const cursor = Cursorly.init({
-    cursor: 0, // Index of the cursor icon (default: 0)
-    effect: { name: "trail", color: "rainbow" } // Effect name and color are required
+  cursor: 0, // Index of the built-in cursor icon (default: 0)
+  effect: { name: "trail", color: "rainbow" } // Apply a built-in effect
 });</code></pre>
 
-        <p>OR, Initialize with custom icon and emoji effect</p>
+        <p>Or with an <strong>emoji-based effect</strong>:</p>
         <pre><code class="language-javascript">const cursor = Cursorly.init({
-    cursor: 0,
-    effect: { name: "emoji", shape:"👻"}
+  cursor: 0, // Built-in icon index
+  effect: { name: "emoji", shape: "👻" }
 });</code></pre>
 
-        <h3><strong>Cursor Icons</strong></h3>
-        
-        <p>Cursorly supports multiple icons. Change icon dynamically:</p>
-        <pre><code class="language-javascript">cursor.setIcon(1); // Change to icon index 1</code></pre>
+        <blockquote class="tip">🧠 This setup uses the built-in icons included with Cursorly. To use your own image or PNG/SVG icon, see the next section.</blockquote>
 
-        <h3><strong>Default Effects</strong></h3>
-        
-        <p>Effect options (only name and color are required):</p>
+        <h3>🖼️ Add a Custom Cursor Icon</h3>
+        <p>You can add your own <strong>custom cursor image</strong> (PNG, SVG, etc.) from any URL or local asset path.</p>
+        <pre><code class="language-javascript">const cursor = Cursorly.init();
+
+// Add your own image as a new cursor icon
+const cursorIndex = cursor.addIcon('https://img.icons8.com/?size=100&amp;id=52516&amp;format=png&amp;color=000000');
+
+// Activate your custom icon
+cursor.setIcon(cursorIndex);</code></pre>
+
+        <p>You can register multiple icons and switch between them dynamically:</p>
+        <pre><code class="language-javascript">const custom1 = cursor.addIcon('icon1.png');
+const custom2 = cursor.addIcon('icon2.svg');
+cursor.setIcon(custom2); // Switch to another custom icon</code></pre>
+
+        <blockquote class="tip">💡 The method <code>cursor.addIcon()</code> returns the index of your new icon so you can reference it later.</blockquote>
+
+        <h3>🔁 Switching Between Icons</h3>
+        <p>Change between any previously registered icons (built-in or custom):</p>
+        <pre><code class="language-javascript">cursor.setIcon(1); // Change to built-in icon index 1
+cursor.setIcon(cursorIndex); // Switch to your custom icon</code></pre>
+
+        <h3>✨ Default Effects</h3>
+        <p>Effect options (only <code>name</code> and <code>color</code> are required):</p>
         <pre><code class="language-javascript">cursor.setEffect({
-    name: "sparkle",   // 'trail', 'sparkle', or 'emojiSnow',etc
-    color: "#ff4081",  // Hex color or "rainbow"
-    density: 10,       // Optional, number of particles per mouse move
-    size: [3, 12],     // Optional, min and max particle size
-    decay: 0.92,       // Optional, particle shrink rate
+  name: "sparkle",   // 'trail', 'sparkle', 'emojiSnow', etc.
+  color: "#ff4081",  // Hex color or "rainbow"
+  density: 10,       // Optional, number of particles per mouse move
+  size: [3, 12],     // Optional, min and max particle size
+  decay: 0.92,       // Optional, particle shrink rate
 });</code></pre>
 
-        <h2>🧩 Creating Custom Effects</h2>
-        <p>You can define custom effects using the same structure as built-ins.</p>
+        <h2>🧠 Creating Custom Effects</h2>
+        <p>You can define your own effects using the same structure as built-ins:</p>
         <pre><code class="language-javascript">const starlightBurst = {
-        name: "starlightBurst",
-        color: ["#ffcc00", "#ffffff", "#ff99ff"],
-        density: 8,
-        size: [3, 9],
-        decay: 0.9,
-        type: "default"
+  name: "starlightBurst",
+  color: ["#ffcc00", "#ffffff", "#ff99ff"],
+  density: 8,
+  size: [3, 9],
+  decay: 0.9,
+  type: "default"
 };
 
 cursor.setEffect(starlightBurst);</code></pre>
+        <p>You can register unlimited custom effects — Cursorly is fully extensible.</p>
 
         <h2>💎 Emoji List</h2>
         <p>Cursorly includes an emoji selector with 100+ emojis ready to use in effects, including:<br>
         ✨ 🔥 💖 ❄️ ⭐ 🪄 🤖 🌈 💫 🦋 ⚡ 🍀 🎉 🌸 💎 🎈 🌟 🧠 🕹️ 🌼 🌺 🌻 🧊 🫧 🪐 ☄️</p>
 
-        <h3><strong>Custom Emoji Effects</strong></h3>
-        
-        <p>CursorlyJS supports <strong>custom emoji effects</strong> out of the box.<br>
-        You can easily create and set them dynamically.</p>
+        <h3>🦋 Custom Emoji Effects</h3>
+        <p>CursorlyJS supports <strong>custom emoji effects</strong> out of the box.<br>You can easily create and set them dynamically:</p>
         <pre><code class="language-javascript">const emojiButterfly = {
   name: "emojiButterfly",
   shape: "🦋",
@@ -307,28 +344,26 @@ cursor.setEffect(starlightBurst);</code></pre>
 };
 
 cursor.setEffect(emojiButterfly);</code></pre>
-        <p>👉 That's it — no registration needed!</p>
 
-        <p>Alternatively, you can also set a custom emoji effect like this way (only name='emoji' and shape='your desired emoji' are required):</p>
+        <p>Alternatively:</p>
         <pre><code class="language-javascript">cursor.setEffect({
-    name: "emoji",   // required, use 'emoji' always for custom emoji effect
-    shape: "👻",     // required, put desired emoji
-    density: 10,       // Optional, number of particles per mouse move
-    size: [3, 12],     // Optional, min and max particle size
-    decay: 0.92,       // Optional, particle shrink rate
+  name: "emoji",
+  shape: "👻",
+  density: 10,
+  size: [3, 12],
+  decay: 0.92,
 });</code></pre>
 
-        <p>Disable or enable effects dynamically::</p>
+        <p>Disable or enable effects dynamically:</p>
         <pre><code class="language-javascript">cursor.disableEffect(); // Turn off particle effects
 cursor.enableEffect();  // Turn on particle effects</code></pre>
 
-        <h3><strong>Enable/Disable Cursor</strong></h3>
-        
-        <p>Cursorly supports multiple icons. Change icon dynamically:</p>
+        <h3>🧭 Enable / Disable Cursor</h3>
+        <p>Cursorly supports toggling the custom cursor easily:</p>
         <pre><code class="language-javascript">cursor.disable(); // Hide custom cursor, revert to default
 cursor.enable();  // Show custom cursor again</code></pre>
 
-        <h2>🧠 Contribution</h2>
+        <h2>🧑‍💻 Contribution</h2>
         <p>We welcome contributions from the community!</p>
         <ol>
             <li>Fork the repo</li>
@@ -359,6 +394,7 @@ cursor.enable();  // Show custom cursor again</code></pre>
             <p><strong>CursorlyJS</strong> — Because your pointer deserves some personality ✨</p>
         </div>
     </div>
+
     <!-- Footer -->
     <footer>
          Cursorly.js • Developed by Ashraf • 
@@ -366,4 +402,4 @@ cursor.enable();  // Show custom cursor again</code></pre>
         <a href="https://linkedin.com/in/iamashruu" target="_blank"><i class="fab fa-linkedin"></i></a>
     </footer>
 </body>
-</html></div>
+</html>

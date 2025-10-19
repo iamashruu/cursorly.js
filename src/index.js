@@ -33,10 +33,10 @@ class Cursorly {
         this.cursorImage.style.zIndex = '99999';
         this.cursorImage.style.width = '32px';
         this.cursorImage.style.height = '32px';
-        this.cursorImage.style.transform = 'translate(-50%, -50%)'; 
+        this.cursorImage.style.transform = 'translate(-50%, -50%)';
         this.cursorImage.src = getIcon(this.options.cursor);
 
-        preloadIcons();
+        preloadIcons()
 
         // Track mouse to move the cursor
         window.addEventListener('mousemove', e => {
@@ -53,6 +53,7 @@ class Cursorly {
         animate(this);
     }
 
+    addIcon(url) { return API.addIcon(this, url); }
     setIcon(index) { API.setIcon(this, index); }
     setEffect(effectObj) { API.setEffect(this, effectObj); }
     enable() { API.enable(this); }
@@ -70,4 +71,3 @@ function init(options = {}) {
     return cursor;
 }
 export default { init };
-

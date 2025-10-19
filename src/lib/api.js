@@ -35,6 +35,15 @@
 //     document.querySelectorAll("a, button").forEach(el => el.style.cursor = "pointer");
 // }
 import { getEffectDefaults, effectsList } from './effects.js';
+import { preloadIcons } from './icons.js';
+
+export function addIcon(lib, url) {
+    if (typeof url === 'string' || url.startsWith('http')) {
+        lib.cursorIcons.push(url);
+        preloadIcons(url);
+        return lib.cursorIcons.length - 1; // Return the index of the newly added icon
+    }
+}
 
 export function setIcon(lib, index) {
     if (lib.cursorIcons[index]) {
@@ -70,5 +79,7 @@ export function disable(lib) {
     lib.particlesEnabled = false;
     document.body.style.cursor = "default";
     document.documentElement.style.cursor = "default";
-    document.querySelectorAll("a, button").forEach(el => el.style.cursor = "pointer");
+    document.querySelectorAll("a, button").forEach((el) => {
+        el.style.cursor = "pointer";
+    });
 }
