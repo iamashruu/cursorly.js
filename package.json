@@ -1,16 +1,16 @@
 {
     "name": "cursorly.js",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Custom cursor library with effects and icons using javascript",
     "type": "module",
-    "main": "dist/cursorly.umd.js",      
-    "module": "dist/cursorly.esm.js",  
-    "browser": "dist/cursorly.min.js",  
+    "main": "dist/cursorly.umd.js",
+    "module": "dist/cursorly.esm.js",
+    "browser": "dist/cursorly.min.js",
     "exports": {
         ".": {
-        "import": "./dist/cursorly.esm.js",
-        "require": "./dist/cursorly.umd.js",
-        "browser": "./dist/cursorly.min.js"
+            "import": "./dist/cursorly.esm.js",
+            "require": "./dist/cursorly.umd.js",
+            "browser": "./dist/cursorly.min.js"
         }
     },
     "files": [
