@@ -49,8 +49,11 @@ Include via **CDN**:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"></script>
 ```
+Or, install via <strong>NPM</strong>:
 
-
+```bash
+npm install cursorly.js
+```
 ## Basic Usage
 
 Initialize the cursor with default options:

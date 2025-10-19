@@ -140,7 +140,9 @@ cursor.setEffect({name:"emoji", shape:"👻", size:[2,4]});
 
 <h2>Installation</h2>
         <p>Include the library via CDN:</p>
-        <pre><code>&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"&gt;&lt;/script&gt;</code></pre>
+        <pre><code>&lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@latest/dist/cursorly.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p>Or install via <strong>NPM</strong>:</p>
+        <pre><code class="language-bash">npm install cursorly.js</code></pre>
 
         <h2>Initialization</h2>
         <p>Initialize the cursor with default options:</p>
@@ -162,7 +164,7 @@ cursor.setEffect({name:"emoji", shape:"👻", size:[2,4]});
                 &lt;meta charset="UTF-8"&gt;
                 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
                 &lt;title>Cursorly.js Example&lt;/title&gt;
-                &lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"&gt;&lt;/script&gt;
+                &lt;script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@latest/dist/cursorly.min.js"&gt;&lt;/script&gt;
             &lt;/head&gt;
             &lt;body&gt;
                 &lt;script&gt;
@@ -202,6 +204,13 @@ const cursor = Cursorly.init({
 // Change cursor icon dynamically
 cursor.setIcon(1);
 
+// Add your own image as a new cursor icon
+const cursorIndex = cursor.addIcon('https://img.icons8.com/?size=100&id=52516&format=png&color=000000');
+//or local path
+const cursorIndex = cursor.addIcon('icon.png');
+
+// Activate your custom icon
+cursor.setIcon(cursorIndex);
 // Change particle effect dynamically
 cursor.setEffect({
     name: "sparkle",   // 'trail', 'sparkle', or 'emojiSnow',etc
@@ -242,7 +251,7 @@ cursor.enable();</code></pre>
 <!-- <script src="../dist/cursorly.min.js"></script> -->
  <!-- load via cdn -->
 <!-- <script src="https://github.com/iamashruu/cursorly.js/releases/download/v1.0.1/cursorly.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.4/dist/cursorly.min.js"></script>
 
 
 <script>
@@ -255,7 +264,7 @@ cursor.enable();</code></pre>
     // const cursorIndex = cursor.addIcon('https://img.icons8.com/?size=100&id=52516&format=png&color=000000');
 
     // Activate your custom icon
-    cursor.setIcon(cursorIndex);
+    // cursor.setIcon(cursorIndex);
     // const emojiButterfly = {
     //     name: "emojiButterfly",
     //     shape: "🦋",
