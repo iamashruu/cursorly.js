@@ -47,7 +47,7 @@ Cursorly.js works in all modern browsers (Chrome, Firefox, Safari, Edge).
 Include via **CDN**:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@v1.0.1/dist/cursorly.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@latest/dist/cursorly.min.js"></script>
 ```
 Or, install via <strong>NPM</strong>:
 
